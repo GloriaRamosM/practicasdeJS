@@ -84,3 +84,46 @@ const todosPares = numbers.every(function (number) {
 });
 
 console.log(todosPares);
+
+// some , hace una pregunta o una condicion y verifica si en el array hay alguno que la cumpla, devuelve true o false
+
+const algunoMayorQueTres = numbers.some(function (number) {
+  return number > 3;
+});
+
+console.log(algunoMayorQueTres);
+
+// reduce : MUY util para sumar los productos dentro de un carrito por ejemplo.
+
+const suma = numbers.reduce(function (acc, number) {
+  return acc + number;
+}, 0);
+console.log(suma);
+
+// Transformador = .MAP , el mas utilizado crea un nuevo array con el resultado de la funcion callback pasado por los parametros
+
+const arr = [1, 6, 7, 9, 10];
+
+const oneAdd = arr.map((num) => num + 1);
+console.log(oneAdd);
+
+// .filter , filtra elementos que cumplen cierta condicion
+
+const arrayFiltrado = [2, 5, 8, 10, 4, 7, 1, 0];
+const filtro = arrayFiltrado.filter((num) => num < 3);
+
+console.log(filtro);
+
+// Buscador .Find : busca en el array lo que estoy buscando pero toma solo el primer valor que cumpla la condicion
+
+const productos = [
+  { nombre: "remera", precio: 400 },
+  { nombre: "campera", precio: 1000 },
+  { nombre: "pantalon", precio: 600 },
+];
+
+const encontrado = productos.find((producto) => producto.precio > 400);
+
+console.log(encontrado);
+
+// el find toma el prmero que encuentra que cumpla con la condicion que declaro luego de llamar a mi metodo
