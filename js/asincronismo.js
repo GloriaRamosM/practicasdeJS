@@ -69,7 +69,7 @@
 // console.log(esperar());
 // console.log("3");
 
-/* PROMESAS*/
+/* PROMESAS : THEN/CATCH/FINALLY. es una de las maneras de manejar promesas*/
 
 function mostrarMensaje(mensaje) {
   document.getElementById("mensajePromesa").innerHTML = mensaje;
@@ -102,7 +102,7 @@ obtenerNumeroAleatorio(9)
 
 console.log(obtenerNumeroAleatorio);
 
-// THY Y CATCH : no es exclusivo de asincronias pero se usa mucho alli. CON EL ASYNC/AWAIT
+/* ASYNC/AWAIT : LO USO A SU VEZ CON EL TRY-CATCH , es la manera mas nueva de manejar promesas           */
 
 function mostrarMensaje(mensaje) {
   document.getElementById("versionMejorada").innerHTML = mensaje;

@@ -2,77 +2,39 @@
 <html lang="es">
 
 <head>
-    <!-- Todos los metadatos utilizo en  html-->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Practica del DOM</title>
-    <meta name="description" content="contenido de clase N° 17 ">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylo.css">
+    <title>Rick and Morty API</title>
 </head>
 
 <body>
     <header>
-        <h1>Clase de DOM N°17 </h1>
+        <div class="header-icons-container">
+            <div class="icons">
+                <!-- Aquí van los iconos -->
+            </div>
+        </div>
     </header>
 
-    <nav class="navbar navbar-default">
-        <div class="navbar-header"> <!-- caja-->
-            <a class="navbar-brand" href="#" target="_blank" rel="noopener noreferrer">Mi Sitio web </a>
+    <nav>
+        <div class="nav-logo-container">
+            <img src="" alt="Logo">
+        </div>
+        <div class="profile-link">
+            <a href="#">Sobre Mi - Perfil</a>
         </div>
     </nav>
 
-    <div class="container">
+    <h1>Rick and Morty Characters</h1>
 
-        <div class="jumbotron">
-            <h2 class="display-2" id="title">Titulo... </h2>
-            <p class="description_container" id="description">
-                Breve descripcion
-            </p>
-        </div>
-    </div>
-
-    <div class="row">
-        <ul class="list-group">
-            <li class="list-group-item" id="first-course">Python</li>
-            <li class="list-group-item">JavaScript</li>
-            <li class="list-group-item">Java 8</li>
-            <li class="list-group-item">Ruby</li>
-            <li class="list-group-item">C#</li>
-            <li class="list-group-item">Kotlin</li>
-            <li class="list-group-item" id="last-course">Perl</li>
-        </ul>
-
-    </div>
-
-    <div>
-        <p id="pid">Esto un parrafo con id </p>
-
-
-    </div>
-
-
-    <div>
-        <h2 id="titles"> Hola Mundo!! </h2>
-        <button id="miBoton">Haz clic aquí</button>
-        <h3>Ejemplo de eventos de teclado</h3>
-        <p>Introduce algo en el siguiente campo de texto:</p>
-        <input placeholder=" Ingrese su nombre ">
-    </div>
-
-
+    <div id="container"></div>
 
     <footer>
-        <div class="container">
-            <div class="row">
-                <p class="copyright"> &copy; Talia Rodrigues</p>
-            </div>
-        </div>
+        <p>All Rights Reserved ©2023 by TaliDev</p>
     </footer>
-    <!-- Como es archivo externo se ubica antes del cierre del 
-              body-->
-    <script src="./js/dom.js"> </script>
+
+    <script src="/js/fetch.js"></script>
 </body>
 
 </html>
