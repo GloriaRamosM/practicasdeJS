@@ -101,3 +101,39 @@ obtenerNumeroAleatorio(9)
 // });
 
 console.log(obtenerNumeroAleatorio);
+
+// THY Y CATCH : no es exclusivo de asincronias pero se usa mucho alli. CON EL ASYNC/AWAIT
+
+function mostrarMensaje(mensaje) {
+  document.getElementById("versionMejorada").innerHTML = mensaje;
+}
+function obtenerDatosDeUsuario(id) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const usuarios = [
+        { id: 1, nombre: "Juan", correo: "juan@mail.com" },
+        { id: 2, nombre: "María", correo: "maria@mail.com" },
+        { id: 3, nombre: "Pedro", correo: "pedro@mail.com" },
+      ];
+      const usuario = usuarios.find((u) => u.id === id);
+      if (usuario) {
+        resolve(usuario);
+      } else {
+        reject("No se encontró ningún usuario con el ID proporcionado");
+      }
+    }, 2000);
+  });
+}
+
+async function mostrarDatosDeUsuario(id) {
+  try {
+    const usuario = await obtenerDatosDeUsuario(id);
+    mostrarMensaje(`Nombre: ${usuario.nombre}, Correo: ${usuario.correo}`);
+  } catch (error) {
+    mostrarMensaje(`Error: ${error}`);
+  } finally {
+    console.log("El proceso a finalizado!");
+  }
+}
+
+mostrarDatosDeUsuario(11);
